@@ -1,0 +1,25 @@
+
+# decision.gettingStarted.mydata.Temperature
+decision.gettingStarted.mydata.Temperature#concept.label = temperature
+decision.gettingStarted.mydata.Temperature.cold#instance.label = cold
+decision.gettingStarted.mydata.Temperature.hot#instance.label = hot
+decision.gettingStarted.mydata.Temperature.warm#instance.label = warm
+
+# decision.gettingStarted.mydata.Weather
+decision.gettingStarted.mydata.Weather#concept.documentation = 
+decision.gettingStarted.mydata.Weather#concept.label = weather
+decision.gettingStarted.mydata.Weather.Weather(java.lang.Long,boolean,decision.gettingStarted.mydata.Temperature)#phrase.navigation = a new {weather} where {0, rain forecast} {1, storm alert} {2, temperature}
+decision.gettingStarted.mydata.Weather.rainForecast1#phrase.action = set the rain forecast of {this} to {rain forecast}
+decision.gettingStarted.mydata.Weather.rainForecast1#phrase.addition_setter = add {rain forecast} to the rain forecast of {this}
+decision.gettingStarted.mydata.Weather.rainForecast1#phrase.navigation = {rain forecast} of {this}
+decision.gettingStarted.mydata.Weather.rainForecast1#phrase.subtraction_setter = subtract {rain forecast} from the rain forecast of {this}
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.action[0] = {this} gets storm alert only if {storm alert}
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.action[1] = make it {storm alert} that {this} is storm alert
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.action[1].deprecated = true
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.navigation = {this} is storm alert
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.negative_predicate = {this} is not storm alert
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.negative_predicate_setter = {this} does not get storm alert
+decision.gettingStarted.mydata.Weather.stormAlert1#phrase.positive_predicate_setter = {this} gets storm alert
+decision.gettingStarted.mydata.Weather.temperature#phrase.action = set the temperature of {this} to {temperature}
+decision.gettingStarted.mydata.Weather.temperature#phrase.clearer = clear the temperature of {this}
+decision.gettingStarted.mydata.Weather.temperature#phrase.navigation = {temperature} of {this}
